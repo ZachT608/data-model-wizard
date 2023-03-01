@@ -1,0 +1,20 @@
+models:
+    - name: brands_data
+      description: This model parses out partner brand data
+      columns:
+        - name: brand_id
+          description: gives uuid of the brand 
+        - name: barcode 
+          description: gives unique barcodes under the brand
+        - name: brand_code
+          description: gives the brand code for given brand
+        - name: category
+          description: gives the category for each brand
+        - name: category_code
+          description: gives the category code for each brand
+        - name: cpg_ref
+          description: gives the cpg name
+        - name: top_brand
+          description: gives if the brand is a top brand (BOOLEAN)
+        - name: brand_name
+          description: gives the brand name
