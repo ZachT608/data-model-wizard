@@ -1,0 +1,31 @@
+-- Question: When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+-- DQ Issue: N/A
+-- Answer: Finished receipts has a higher average spend than rejected receipts do.
+-- Query to get answer:
+
+WITH
+
+receipts_finished as (
+
+	SELECT receipt_id, total_spent
+	
+	FROM receipts_data
+		
+	WHERE receipt_status = 'FINISHED'
+
+),
+
+receipts_rejected as (
+
+	SELECT receipt_id, total_spent
+	
+	FROM receipts_data
+		
+	WHERE receipt_status = 'REJECTED'
+
+)
+
+SELECT AVG(receipts_finished.total_spent) as avg_of_finished
+,	AVG(receipts_rejected.total_spent) as avg_of_rejected
+
+FROM receipts_finished, receipts_rejected
