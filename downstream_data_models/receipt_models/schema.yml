@@ -1,0 +1,54 @@
+models:
+    - name: receipts_data
+      description: Model that stores all receipt information
+      columns:
+        - name: user_id
+          description: gives uuid of a user
+        - name: receipt_id
+          description: gives a uuid of a receipt
+        - name: receipt_status
+          description: gives current receipt status
+        - name: date_scanned
+          description: gives the timestamp the receipt was processed
+        - name: receipt_created_date
+          description: same as date_scanned column, giving when receipt was created
+        - name: purchase_date
+          description: gives the date of when the purchase was made
+        - name: finished_date
+          description: gives current receipt finished timestamp 
+        - name: total_spent
+          description: gives the total spent on given receipt
+        - name: bonus_points_earned
+          description: gives how many points was earned with bonus points
+        - name: reason_for_bonus_points_earned
+          description: gives the reasoning of why bonus points were earned on given receipt
+        - name: total_points_earned
+          description: gives the total amount of points earned per receipt
+        - name: date_points_awarded
+          description: gives timestamp of when the points awarded to the receipt post-processing
+        - name: total_items_purchased
+          description: gives the total amount of items purchased on the receipt
+        - name: product_description
+          description: gives the name of products purchased on the receipt
+        - name: barcode
+          description: gives the barcode of the product purchased
+        - name: purchase_qty
+          description: gives the quantity of each product purchased
+        - name: item_qty_price
+          description: gives the quantity price of the purchased quantity
+        - name: final_price
+          description: gives the total price of product purchased quantity
+        - name: partner_item_id
+          description: gives the uuid of the partner item
+        - name: prevent_target_gap_points
+          description: gives a boolean column if the receipt is preventing target gap points
+        - name: needs_fetch_review
+          description: gives a boolean column if the receipt requires a fetch review
+        - name: user_flagged_barcode
+          description: gives the barcode flagged by the user
+        - name: user_flagged_new_item
+          description: gives the new item that was flagged by the user
+        - name: user_flagged_price
+          description: gives the flagged price by the user
+        - name: user_flagged_qty
+          description: gives the flagged quantity by the user

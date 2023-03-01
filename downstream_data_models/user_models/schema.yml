@@ -1,0 +1,18 @@
+models:
+    - name: 
+      description: 
+      columns:
+        - name: user_id
+          description: gives the uuid per account
+        - name: active
+          description: gives the boolean status of the account (deactivated or not)
+        - name: account_creation
+          description: gives the timestamp of when the account was created
+        - name: last_login
+          description: gives the timestamp of when the user last logged in
+        - name: user_role
+          description: gives the role of the given user
+        - name: sign_up_source
+          description: gives the source of how the user signed up
+        - name: state
+          description: gives the state abbreviation the user is in
